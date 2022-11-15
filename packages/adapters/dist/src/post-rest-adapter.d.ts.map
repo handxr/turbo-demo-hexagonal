@@ -1,0 +1,1 @@
+{"version":3,"file":"post-rest-adapter.d.ts","sourceRoot":"","sources":["../../src/post-rest-adapter.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,KAAK,EAAE,WAAW,EAAE,MAAM,QAAQ,CAAC;AAEjD,qBAAa,eAAgB,YAAW,WAAW;IAC3C,QAAQ,IAAI,OAAO,CAAC,KAAK,EAAE,CAAC;IAK5B,OAAO,CAAC,EAAE,EAAE,MAAM,GAAG,OAAO,CAAC,KAAK,CAAC;IAOnC,UAAU,CAAC,IAAI,EAAE,KAAK,GAAG,OAAO,CAAC,KAAK,CAAC;CAU9C"}

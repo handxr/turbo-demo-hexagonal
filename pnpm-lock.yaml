@@ -17,6 +17,7 @@ importers:
       '@types/react': ^18.0.24
       '@types/react-dom': ^18.0.8
       '@vitejs/plugin-react': ^2.2.0
+      loader: workspace:*
       react: ^18.2.0
       react-dom: ^18.2.0
       typescript: ^4.6.4
@@ -28,6 +29,7 @@ importers:
       '@types/react': 18.0.25
       '@types/react-dom': 18.0.9
       '@vitejs/plugin-react': 2.2.0_vite@3.2.3
+      loader: link:../../packages/loader
       typescript: 4.8.4
       vite: 3.2.3
 
@@ -75,6 +77,16 @@ importers:
       eslint-config-turbo: 0.0.4_eslint@7.32.0
       eslint-plugin-react: 7.31.8_eslint@7.32.0
     devDependencies:
+      typescript: 4.8.4
+
+  packages/loader:
+    specifiers:
+      adapters: workspace:*
+      domain: workspace:*
+      typescript: ^4.8.4
+    devDependencies:
+      adapters: link:../adapters
+      domain: link:../domain
       typescript: 4.8.4
 
   packages/tsconfig:

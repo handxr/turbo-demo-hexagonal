@@ -6,7 +6,7 @@ export const AddPostForm = () => {
 
   const formRef = React.useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const formData = new FormData(formRef.current!);
@@ -16,9 +16,12 @@ export const AddPostForm = () => {
       body: formData.get("body") as string,
     };
 
-    createPost(post);
-
-    formRef.current!.reset();
+    await createPost(post)
+      .then(() => {
+        window.alert("Post created");
+        formRef.current!.reset();
+      })
+      .catch((err) => window.alert(err));
   };
 
   return (

@@ -18,7 +18,22 @@ class Post implements PostAPI {
   }
 
   async createPost(post: IPost): Promise<IPost> {
+    this.#checkThatTitleIsFilled(post);
+    this.#checkThatBodyIsFilled(post);
+
     return await this.postAdapter.createPost(post);
+  }
+
+  #checkThatTitleIsFilled(post: IPost) {
+    if (!post.title) {
+      throw new Error("Title is required");
+    }
+  }
+
+  #checkThatBodyIsFilled(post: IPost) {
+    if (!post.body) {
+      throw new Error("Body is required");
+    }
   }
 }
 

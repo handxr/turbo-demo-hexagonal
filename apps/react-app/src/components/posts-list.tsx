@@ -1,4 +1,5 @@
 import { usePost } from "../hooks";
+import "web-components/dist/components/post-card";
 
 export const PostsList = () => {
   const { posts } = usePost();
@@ -9,8 +10,7 @@ export const PostsList = () => {
         .reverse()
         .map((post) => (
           <li key={post.id}>
-            <h2>{post.title}</h2>
-            <p>{post.body}</p>
+            <post-card title={post.title} body={post.body} />
           </li>
         ))}
     </ul>

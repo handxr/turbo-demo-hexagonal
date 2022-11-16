@@ -1,0 +1,13 @@
+{
+  "entries": [
+    "./components/post-card/post-card.js",
+    "./components/post-list/post-list.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "2.19.3",
+    "typescriptVersion": "4.7.4"
+  },
+  "collections": [],
+  "bundles": []
+}

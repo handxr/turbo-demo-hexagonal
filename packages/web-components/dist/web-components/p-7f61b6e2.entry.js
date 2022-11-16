@@ -1,0 +1,1 @@
+import{r as s,h as t}from"./p-06b46fc7.js";const r=class{constructor(t){s(this,t),this.title=void 0,this.body=void 0}render(){return t("div",null,t("h2",null,this.title),t("p",null,this.body))}};export{r as post_card}

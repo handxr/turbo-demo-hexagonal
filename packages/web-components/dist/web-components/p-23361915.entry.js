@@ -1,0 +1,1 @@
+import{r as s,h as o}from"./p-06b46fc7.js";const t=class{constructor(o){s(this,o),this.posts=void 0}render(){return console.log("yo"),o("ul",null,this.posts.slice(-5).reverse().map((s=>o("li",null,s.title))))}};export{t as post_list}

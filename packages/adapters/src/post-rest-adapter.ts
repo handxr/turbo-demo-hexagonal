@@ -1,20 +1,20 @@
 import type { IPost, PostAdapter } from "domain";
 
 export class PostRestAdapter implements PostAdapter {
+  #url = "https://jsonplaceholder.typicode.com/posts";
+
   async getPosts(): Promise<IPost[]> {
-    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const response = await fetch(this.#url);
     return await response.json();
   }
 
   async getPost(id: number): Promise<IPost> {
-    const response = await fetch(
-      `https://jsonplaceholder.typicode.com/posts/${id}`
-    );
+    const response = await fetch(`${this.#url}/${id}`);
     return await response.json();
   }
 
   async createPost(post: IPost): Promise<IPost> {
-    const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    const response = await fetch(this.#url, {
       method: "POST",
       body: JSON.stringify(post),
       headers: {
